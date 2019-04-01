@@ -8,10 +8,12 @@ $(document).ready(function(){
       console.log(element);
       var myInput = $('#input' + element).val();
       myRay.push(myInput);
-      $("#groceries").append('<li>'+myInput+'</li>');
       // $("#groceries").append('<li></li>');
       // $('#groceries').eq(element).text('test');
       });
+      myRay.sort();
+      input.forEach(function(element){
+        $("#groceries").append('<li>'+myRay[element -1]+'</li>');
+      });
     });
   });
-  //myRay.sort();
